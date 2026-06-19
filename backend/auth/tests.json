@@ -1,0 +1,13 @@
+{
+  "tests": [
+    {
+      "name": "Check lock status",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "check"},
+      "expectedStatus": 200,
+      "expectedBody": {"locked": false},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

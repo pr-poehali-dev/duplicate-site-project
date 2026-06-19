@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "Public sync data",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"serverStatus": "string"},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Unauthorized write blocked",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "set_status", "status": "offline"},
+      "expectedStatus": 401,
+      "expectedBody": {"error": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
