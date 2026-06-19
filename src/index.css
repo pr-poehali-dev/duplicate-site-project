@@ -90,6 +90,38 @@
   }
 }
 
+:root {
+  --admin-bg: 220 26% 7%;
+  --admin-panel: 222 24% 10%;
+  --admin-border: 220 18% 18%;
+  --admin-accent: 152 76% 48%;
+  --admin-cyan: 188 94% 50%;
+  --admin-amber: 38 95% 56%;
+  --admin-red: 0 84% 60%;
+  --admin-muted: 220 12% 56%;
+}
+
+@layer base {
+  body {
+    font-family: "Rubik", sans-serif;
+  }
+}
+
+.font-display {
+  font-family: "Oswald", sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.admin-grid-bg {
+  background-image:
+    linear-gradient(hsl(var(--admin-border) / 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--admin-border) / 0.4) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
 @layer base {
   * {
     @apply border-border;
